@@ -40,6 +40,11 @@ async function handleJoinRoom(event: FormEvent){
     return;
   }
 
+  if (roomRef.val().edendAt){
+    alert('Room already closed.');
+    return;
+  }
+
   history.push(`/rooms/${roomCode}`);
 
 }
